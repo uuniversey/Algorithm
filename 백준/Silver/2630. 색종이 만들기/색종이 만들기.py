@@ -15,8 +15,6 @@ def cut(n, p):
         else:
             cut(n//2, [k, l])
 
-        num = 0
-
 
 N = int(input())
 paper = [list(map(int, input().split())) for _ in range(N)]
