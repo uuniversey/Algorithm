@@ -1,7 +1,9 @@
+import sys
 import heapq
+input = sys.stdin.readline
 
 N = int(input())
-grid = [list(map(int, input())) for _ in range(N)]
+grid = [list(map(int, input().rstrip())) for _ in range(N)]
 vstd = [[N**2] * N for _ in range(N)]
 
 hq = []
