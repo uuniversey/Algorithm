@@ -2,7 +2,7 @@ import heapq
 
 N = int(input())
 grid = [list(map(int, input())) for _ in range(N)]
-vstd = [[float('inf')] * N for _ in range(N)]
+vstd = [[N**2] * N for _ in range(N)]
 
 hq = []
 heapq.heappush(hq, (0, 0, 0))
