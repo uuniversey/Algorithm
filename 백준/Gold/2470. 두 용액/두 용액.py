@@ -7,7 +7,7 @@ arr.sort()
 ans = sys.maxsize
 
 l, r = 0, N-1
-while l < N and r >= 0:
+while True:
     if l >= r:
         break
     calc = arr[l] + arr[r]
