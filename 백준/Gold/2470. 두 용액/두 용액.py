@@ -2,8 +2,7 @@ import sys
 
 input = sys.stdin.readline
 N = int(input())
-arr = list(map(int, input().split()))
-arr.sort()
+arr = sorted(list(map(int, input().split())))
 ans = sys.maxsize
 
 l, r = 0, N-1
