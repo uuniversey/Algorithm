@@ -1,19 +1,20 @@
-import sys
-input = sys.stdin.readline
-
 N = int(input())
 M = int(input())
 S = input()
 
-pn = ''
-for i in range(2*N+1):
-    if i % 2:
-        pn += 'O'
-    else:
-        pn += 'I'
-
 ans = 0
-for j in range(M):
-    if pn == S[j:(j+2*N+1)]:
-        ans += 1
+i = 0
+count = 0
+
+while i < M-1:
+    if S[i:i+3] == 'IOI':
+        count += 1
+        i += 2
+        if count == N:
+            ans += 1
+            count -= 1
+    else:
+        i += 1
+        count = 0
+
 print(ans)
